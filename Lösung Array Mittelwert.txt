@@ -1,0 +1,37 @@
+using System;
+
+namespace Array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double mittel = 0;
+            int sum = 0;
+
+            Console.WriteLine("Zahlen eingeben (anzahl)");
+            int anzahl = Convert.ToInt32(Console.ReadLine());
+
+
+            int[] mittelwert = new int[anzahl];
+
+            Console.WriteLine("Zahlen eingeben");
+
+            for(int i=0; i<anzahl; i++)
+            {
+                mittelwert[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for(int i=0; i<anzahl; i++)
+            {
+                sum += mittelwert[i];
+            }
+
+            mittel = sum / anzahl;
+
+            Console.WriteLine("Lösung: " + mittel);
+
+            Console.ReadKey();
+        }
+    }
+}
